@@ -20,7 +20,7 @@ function showoutput(){
 
     }
 
-    if(currentPrice.value >= purchasePrice.value){
+    else if(purchasePrice.value < currentPrice.value){
 
         const profitVal = currentPrice.value - purchasePrice.value;
         const profitAmt = profitVal * stockQuantity.value;
@@ -28,6 +28,10 @@ function showoutput(){
 
         outputBtn.innerText = `The profit is ${profitAmt} and profit percentage is ${profitPer}`;
         changeColor.style.backgroundColor = "green";
+    }
+
+    else{
+        outputBtn.innerText = `There is no gain or loss on your stocks price`;
     }
     
 
